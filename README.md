@@ -35,17 +35,68 @@ Tolerance addresses all four core outcomes of the Unilog UniHack challenge:
 
 ## 🎨 Visual Identity & UI
 Tolerance avoids the standard "ambient glow" AI template and uses an industrial technical drawing theme:
-* **Palette**: Charcoal/graphite slate base (`#0d0e10`, `#141619`) with blueprint cyan accents (`#00f0ff`).
+* **Palette**: Charcoal/graphite slate base (`#0d0e10`, `#141619`) with two functional accent colors:
+  * **Blueprint Cyan (`#00f0ff`)**: Digital/resolved parameters and clean fields.
+  * **Muted Copper (`#c87a4d`)**: Raw catalog data, manufacturer metadata, and physical components.
 * **Typography**: Monospace fonts (`JetBrains Mono`) for specifications and data grids, paired with geometric sans-grotesk (`Space Grotesk`) for headers.
 * **Signature Motif**: An interactive **Blueprint Transformation View** showing raw product items morphing into structured specification callouts with leader-lines and tolerance confidence intervals.
+
+---
+
+## 🔄 Data Processing Pipeline Flow
+```mermaid
+graph TD
+    A[Raw Messy Catalog Data] --> B[Phase 0: Input Schema Profiler]
+    B --> C[Phase 1: Brand & Manufacturer De-duplication]
+    C --> D[Phase 2: Taxonomy & Classification]
+    D --> E[Phase 3: Hybrid Attribute Extraction]
+    E --> F[Phase 3.5: Sanity Validation & AI Enrichment]
+    F --> G[Phase 4: UOM & Fraction Normalization]
+    G --> H[Phase 5: E-commerce Description Builder]
+    H --> I[Phase 6: Evaluation & ROI Metrics]
+    I --> J[Enriched Search-Ready Product Record]
+    
+    style A fill:#141619,stroke:#c87a4d,stroke-width:2px,color:#fff
+    style J fill:#141619,stroke:#00f0ff,stroke-width:2px,color:#fff
+```
 
 ---
 
 ## 🛠️ Technical Stack
 * **Framework**: Next.js 15 (App Router) + TypeScript
 * **Styling**: Tailwind CSS v4 (PostCSS)
-* **AI Models**: Gemini 1.5 Flash (via `@google/generative-ai`)
+* **AI Models**: Gemini 2.5 Flash / `gemini-flash-latest` (via `@google/generative-ai`)
 * **Host**: Vercel
+
+### System Architecture
+```mermaid
+graph TD
+    SubGraph1[Client Layer] --> SubGraph2[API Gateway]
+    SubGraph2 --> SubGraph3[Core Processing Pipeline]
+    
+    subgraph Client Layer
+        UI[Next.js 15 Web Dashboard]
+        VP[Blueprint Viewport]
+        ROI[ROI Metrics Panel]
+    end
+    
+    subgraph API Gateway
+        API[Serverless API /api/enrich]
+    end
+    
+    subgraph Core Processing Pipeline
+        Engine[Pipeline Controller]
+        Cache[(Local Pre-computed Cache)]
+        Gemini[Google Gemini API]
+    end
+    
+    Engine --> Cache
+    Engine --> Gemini
+    
+    style UI fill:#141619,stroke:#00f0ff,stroke-width:1px,color:#fff
+    style API fill:#141619,stroke:#00f0ff,stroke-width:1px,color:#fff
+    style Engine fill:#141619,stroke:#c87a4d,stroke-width:1px,color:#fff
+```
 
 ---
 
