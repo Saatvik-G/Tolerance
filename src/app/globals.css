@@ -4,13 +4,10 @@
 
 @theme {
   --color-brand-cyan: #00f0ff;
-  --color-brand-muted: #008b99;
+  --color-brand-copper: #c87a4d;
   --color-bg-base: #0d0e10;
   --color-bg-surface: #141619;
-  --color-border-grid: #22252a;
-  
-  --font-technical: "JetBrains Mono", "Courier New", monospace;
-  --font-grotesk: "Space Grotesk", "Inter", sans-serif;
+  --color-border-grid: #1e2124;
 }
 
 :root {
@@ -24,16 +21,61 @@ body {
   font-family: "Space Grotesk", "Inter", sans-serif;
 }
 
-/* Custom engineering blueprint grid background */
+/* Custom engineering drafting blueprint grid (sparse lines with measurement subdivisions) */
 .blueprint-grid {
   background-color: #0d0e10;
   background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
+    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px; /* sparse grid */
 }
 
-/* Horizontal scan line animation */
+/* Subtle hairline lines */
+.blueprint-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(200, 122, 77, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(200, 122, 77, 0.02) 1px, transparent 1px);
+  background-size: 16px 16px; /* subdivision ticks */
+  pointer-events: none;
+}
+
+/* Drafting border coordinate ticks along the top and left edges */
+.drafting-paper {
+  position: relative;
+  border: 1px solid rgba(200, 122, 77, 0.2);
+  margin: 16px;
+  padding: 16px;
+}
+
+/* Crosshair corner marks */
+.corner-crosshair {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.corner-crosshair::before, .corner-crosshair::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(200, 122, 77, 0.4);
+}
+.corner-crosshair::before {
+  top: 7px;
+  left: 0;
+  width: 16px;
+  height: 1px;
+}
+.corner-crosshair::after {
+  top: 0;
+  left: 7px;
+  width: 1px;
+  height: 16px;
+}
+
+/* Scanning bar animation */
 @keyframes scan {
   0% { top: 0%; opacity: 0; }
   10% { opacity: 1; }
@@ -45,16 +87,8 @@ body {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(90deg, transparent, #00f0ff, transparent);
-  box-shadow: 0 0 10px #00f0ff;
   animation: scan 2.5s linear infinite;
-}
-
-/* Grid overlay background */
-.grid-overlay {
-  background-size: 120px 120px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+  pointer-events: none;
 }

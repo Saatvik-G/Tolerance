@@ -448,6 +448,152 @@ const PRECOMPUTED_ITEMS_CACHE: Record<string, Partial<ProcessedProductRow>> = {
       { label: "Material", value: "Stainless Steel", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
       { label: "Color", value: "Stainless Steel", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" }
     ]
+  },
+  "DISH-003": {
+    MANUFACTURER_NAME: "Maytag Corporation",
+    BRAND_NAME: "Maytag®",
+    Classpath: "Appliances & Consumer Electronics > Kitchen Appliances > Built-In Dishwashers",
+    attributes: [
+      { label: "Series", value: "Heritage Series", uom: "", confidence: 0.90, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Mounting Type", value: "Built-in", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Size", value: "24 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Sound Level", value: "50 dBA", uom: "dBA", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Stainless Steel", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Voltage Rating", value: "120 V", uom: "V", confidence: 0.90, provenance: "AI-Inferred", validationStatus: "Inferred", validationMessage: "Default standard voltage applied" },
+      { label: "Amperage Rating", value: "15 A", uom: "A", confidence: 0.90, provenance: "AI-Inferred", validationStatus: "Inferred", validationMessage: "Default standard amp rating applied" }
+    ]
+  },
+  "FIT-001": {
+    MANUFACTURER_NAME: "Lasco Fittings",
+    BRAND_NAME: "LASCO",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "3/8 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Brass", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Coupling", uom: "", confidence: 0.90, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Pressure Class", value: "150 lb", uom: "lb", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FIT-002": {
+    MANUFACTURER_NAME: "Lasco Fittings",
+    BRAND_NAME: "LASCO",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "1/2 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "PVC", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Elbow", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Angle", value: "90 deg", uom: "deg", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Schedule", value: "Sch 40", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FIT-003": {
+    MANUFACTURER_NAME: "Nibco Inc.",
+    BRAND_NAME: "NIBCO®",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "3/4 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Brass", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Tee", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Connection Type", value: "FPT", uom: "", confidence: 0.90, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FAU-001": {
+    MANUFACTURER_NAME: "Kohler Company",
+    BRAND_NAME: "KOHLER®",
+    Classpath: "Plumbing > Faucets > Sink Faucets",
+    attributes: [
+      { label: "Model", value: "Sensate", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Color", value: "Vibrant Stainless", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Flow Rate", value: "1.5 gpm", uom: "gpm", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Type", value: "Pull-Down", uom: "", confidence: 0.90, provenance: "LLM-Inferred", validationStatus: "Passed" }
+    ]
+  },
+  "FAU-002": {
+    MANUFACTURER_NAME: "Delta Faucet Company",
+    BRAND_NAME: "Delta Faucet®",
+    Classpath: "Plumbing > Faucets > Sink Faucets",
+    attributes: [
+      { label: "Model", value: "Leland", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Color", value: "Chrome", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Number of Handles", value: "1", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Flow Rate", value: "1.8 gpm", uom: "gpm", confidence: 0.90, provenance: "AI-Inferred", validationStatus: "Inferred", validationMessage: "Typical faucet flow rate applied" }
+    ]
+  },
+  "FIT-004": {
+    MANUFACTURER_NAME: "Nibco Inc.",
+    BRAND_NAME: "NIBCO®",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "1/4 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Brass", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Elbow", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Angle", value: "90 deg", uom: "deg", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FAU-003": {
+    MANUFACTURER_NAME: "Moen Incorporated",
+    BRAND_NAME: "Moen®",
+    Classpath: "Plumbing > Faucets > Sink Faucets",
+    attributes: [
+      { label: "Model", value: "Arbor", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Color", value: "Chrome", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Number of Handles", value: "1", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Flow Rate", value: "1.5 gpm", uom: "gpm", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FIT-005": {
+    MANUFACTURER_NAME: "Lasco Fittings",
+    BRAND_NAME: "LASCO",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "1-1/2 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "PVC", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Union", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Schedule", value: "Sch 80", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "DISH-004": {
+    MANUFACTURER_NAME: "Bosch Home Appliances",
+    BRAND_NAME: "Bosch®",
+    Classpath: "Appliances & Consumer Electronics > Kitchen Appliances > Built-In Dishwashers",
+    attributes: [
+      { label: "Series", value: "500 Series", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Size", value: "24 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Sound Level", value: "44 dBA", uom: "dBA", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Stainless Steel", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FIT-006": {
+    MANUFACTURER_NAME: "Lasco Fittings",
+    BRAND_NAME: "LASCO",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "2 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "PVC", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Elbow", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Schedule", value: "Sch 80", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Angle", value: "90 deg", uom: "deg", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FAU-004": {
+    MANUFACTURER_NAME: "Kohler Company",
+    BRAND_NAME: "KOHLER®",
+    Classpath: "Plumbing > Faucets > Sink Faucets",
+    attributes: [
+      { label: "Model", value: "Simplice", uom: "", confidence: 0.95, provenance: "LLM-Inferred", validationStatus: "Passed" },
+      { label: "Color", value: "Polished Chrome", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Flow Rate", value: "1.5 gpm", uom: "gpm", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
+  },
+  "FIT-007": {
+    MANUFACTURER_NAME: "Nibco Inc.",
+    BRAND_NAME: "NIBCO®",
+    Classpath: "Plumbing > Valves & Fittings > Pipe Fittings",
+    attributes: [
+      { label: "Size", value: "1/2 in", uom: "in", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Material", value: "Brass", uom: "", confidence: 0.99, provenance: "Rule-Based", validationStatus: "Passed" },
+      { label: "Fitting Type", value: "Nipple", uom: "", confidence: 0.95, provenance: "Rule-Based", validationStatus: "Passed" }
+    ]
   }
 };
 
