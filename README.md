@@ -6,7 +6,8 @@ This application is built for the **UniHack** hackathon, solving the challenge o
 
 ## 🚀 Live Demo & Repository
 * **GitHub Repository**: [Saatvik-G/Tolerance](https://github.com/Saatvik-G/Tolerance.git)
-* **Live Deployment**: Deployed on Vercel.
+* **Live Deployment**: [tolerance-ten.vercel.app](https://tolerance-ten.vercel.app/)
+* **Demo Video**: [Guidde Playbook Video Walkthrough](https://app.guidde.com/share/playbooks/8iiUdixCsLkudTRbbf8Jws?origin=PBBuMYerseb1XIeJip2pj6eLYmS2&mode=videoOnly)
 
 ---
 
