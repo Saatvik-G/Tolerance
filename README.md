@@ -42,6 +42,11 @@ Tolerance avoids the standard "ambient glow" AI template and uses an industrial 
 * **Typography**: Monospace fonts (`JetBrains Mono`) for specifications and data grids, paired with geometric sans-grotesk (`Space Grotesk`) for headers.
 * **Signature Motif**: An interactive **Blueprint Transformation View** showing raw product items morphing into structured specification callouts with leader-lines and tolerance confidence intervals.
 
+### 📐 Dashboard Wireframe Schema Mockup
+Below is the engineering wireframe blueprint diagram of the Tolerance catalog manager interface:
+
+![Dashboard Wireframe Schema](/public/dashboard_wireframe.jpg)
+
 ---
 
 ## 🔄 Data Processing Pipeline Flow
