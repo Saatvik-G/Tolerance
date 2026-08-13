@@ -664,7 +664,7 @@ export async function enrichProductRow(row: RawProductRow): Promise<ProcessedPro
     // AI Fallback Call for un-parsed custom rows
     if (genAI && attributes.length === 0) {
       try {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
         const prompt = `Analyze this industrial product description: "${row.Part_Desc}".
         Classify it inside taxonomy "${classpath}".
         Extract all attributes like: Size, Material, Fitting Type, Sound Level, Voltage, Flow Rate.
